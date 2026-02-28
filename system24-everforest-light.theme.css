@@ -1,16 +1,11 @@
 /**
- * @name system24 (everforest) light 
- * @description made by refact0r, I modified to light theme
+ * @name system24 (everforest) light
+ * @description Everforest palette adapted for light mode, maintaining green/earthy accents
  * @author refact0r
  * @version 2.0.0
- * @invite nz87hXyvcy
- * @website https://github.com/refact0r/system24
- * @source https://github.com/refact0r/system24/blob/master/theme/system24.theme.css
- * @authorId 508863359777505290
- * @authorLink https://www.refact0r.dev
 */
 
-/* import theme modules */
+/* import base theme */
 @import url('https://refact0r.github.io/system24/build/system24.css');
 
 body {
@@ -22,38 +17,14 @@ body {
     --gap: 12px;
     --divider-thickness: 4px;
     --border-thickness: 2px;
-    --border-hover-transition: 0.2s ease;
 
     --animations: on;
     --list-item-transition: 0.2s ease;
-    --dms-icon-svg-transition: 0.4s ease;
 
     --top-bar-height: var(--gap);
     --top-bar-button-position: titlebar;
     --top-bar-title-position: off;
     --subtle-top-bar-title: off;
-
-    --custom-window-controls: off;
-    --window-control-size: 14px;
-
-    --custom-dms-icon: off;
-    --dms-icon-svg-url: url('');
-    --dms-icon-svg-size: 90%;
-    --dms-icon-color-before: var(--icon-subtle);
-    --dms-icon-color-after: var(--white);
-    --custom-dms-background: off;
-    --dms-background-image-url: url('');
-    --dms-background-image-size: cover;
-    --dms-background-color: linear-gradient(70deg, var(--blue-4), var(--purple-4), var(--red-4));
-
-    --background-image: off;
-    --background-image-url: url('');
-
-    --transparency-tweaks: off;
-    --remove-bg-layer: off;
-    --panel-blur: off;
-    --blur-amount: 12px;
-    --bg-floating: var(--bg-3);
 
     --small-user-panel: on;
     --unrounding: on;
@@ -67,80 +38,79 @@ body {
     --label-font-weight: 500;
 }
 
+/* -------------------------
+   Everforest Light Colors
+------------------------- */
 :root {
     --colors: on;
 
-    /* Text colors */
-    --text-0: var(--bg-4);
-    --text-1: oklch(0.2 0.02 240); /* darker text for light backgrounds */
-    --text-2: oklch(0.1 0.02 240);
-    --text-3: oklch(0.15 0.02 240);
-    --text-4: oklch(0.3 0.02 240);
-    --text-5: var(--green-4);
+    /* Text */
+    --text-0: oklch(0.15 0.02 120); /* dark text on light panels */
+    --text-1: oklch(0.12 0.02 120);
+    --text-2: oklch(0.1 0.02 120);
+    --text-3: oklch(0.2 0.03 120);
+    --text-4: oklch(0.3 0.03 120);
+    --text-5: oklch(0.4 0.05 125); /* muted greenish text */
 
-    /* Background colors */
-    --bg-1: oklch(0.95 0.01 220);
-    --bg-2: oklch(0.9 0.01 220);
-    --bg-3: oklch(0.85 0.01 220);
-    --bg-4: oklch(0.98 0.01 220);
+    /* Backgrounds */
+    --bg-1: oklch(0.95 0.03 120); /* panels/buttons when clicked */
+    --bg-2: oklch(0.90 0.03 120); /* default panels/buttons */
+    --bg-3: oklch(0.85 0.03 120); /* secondary spacing panels */
+    --bg-4: oklch(0.98 0.02 120); /* main background */
     --hover: var(--bg-2);
     --active: var(--bg-1);
-    --active-2: oklch(0.92 0.01 220);
+    --active-2: oklch(0.92 0.03 120);
     --message-hover: var(--hover);
 
-    /* Accent colors */
-    --accent-1: var(--green-3);
-    --accent-2: var(--green-2);
-    --accent-3: var(--green-1);
-    --accent-4: var(--green-1);
-    --accent-5: var(--green-1);
-    --accent-new: var(--red-3);
+    /* Accents */
+    --accent-1: oklch(0.5 0.08 125); /* links, highlights */
+    --accent-2: oklch(0.45 0.08 125);
+    --accent-3: oklch(0.4 0.08 125);
+    --accent-4: oklch(0.35 0.08 125);
+    --accent-5: oklch(0.3 0.06 125);
+    --accent-new: oklch(0.7 0.08 345); /* muted red for mute/deafen */
+
+    /* Mentions / Replies */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent);
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
     --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
 
-    /* Status indicators */
-    --online: var(--green-2);
-    --dnd: var(--red-3);
-    --idle: var(--yellow-3);
-    --streaming: var(--purple-3);
+    /* Status */
+    --online: oklch(0.45 0.08 125);
+    --dnd: oklch(0.7 0.08 345);
+    --idle: oklch(0.65 0.08 90);
+    --streaming: oklch(0.6 0.08 280);
     --offline: var(--text-4);
 
     /* Borders */
     --border-light: var(--hover);
     --border: var(--active);
     --border-hover: var(--accent-2);
-    --button-border: hsl(220, 0%, 0%, 0.1);
+    --button-border: hsl(0, 0%, 0%, 0.05);
 
-    /* Base colors */
-    --red-1: oklch(0.9 0.08 19);
+    /* Base Colors */
+    --red-1: oklch(0.7 0.08 19);
     --red-2: var(--red-1);
     --red-3: var(--red-1);
-    --red-4: oklch(0.8 0.08 19);
-    --red-5: oklch(0.7 0.03 345);
-
-    --green-1: oklch(0.6 0.08 125);
+    --green-1: oklch(0.55 0.08 125);
     --green-2: var(--green-1);
     --green-3: var(--green-1);
-    --green-4: oklch(0.7 0.08 125);
-    --green-5: oklch(0.8 0.03 157);
-
-    --blue-1: oklch(0.6 0.06 185);
+    --green-4: oklch(0.6 0.08 125);
+    --green-5: oklch(0.7 0.04 157);
+    --blue-1: oklch(0.55 0.06 185);
     --blue-2: var(--blue-1);
     --blue-3: var(--blue-1);
-    --blue-4: oklch(0.7 0.06 185);
-    --blue-5: oklch(0.8 0.03 231);
-
+    --blue-4: oklch(0.6 0.06 185);
+    --blue-5: oklch(0.7 0.03 231);
     --yellow-1: oklch(0.6 0.08 83);
     --yellow-2: var(--yellow-1);
     --yellow-3: var(--yellow-1);
     --yellow-4: oklch(0.7 0.08 83);
     --yellow-5: oklch(0.8 0.03 101);
-
-    --purple-1: oklch(0.6 0.08 349);
+    --purple-1: oklch(0.55 0.08 349);
     --purple-2: var(--purple-1);
     --purple-3: var(--purple-1);
-    --purple-4: oklch(0.7 0.08 349);
+    --purple-4: oklch(0.6 0.08 349);
     --purple-5: var(--red-5);
 }
