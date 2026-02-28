@@ -1,6 +1,6 @@
 /**
  * @name system24 (everforest) light
- * @description Everforest palette adapted for light mode, maintaining green/earthy accents
+ * @description Everforest lightmode matching your system colors
  * @author refact0r
  * @version 2.0.0
 */
@@ -23,8 +23,6 @@ body {
 
     --top-bar-height: var(--gap);
     --top-bar-button-position: titlebar;
-    --top-bar-title-position: off;
-    --subtle-top-bar-title: off;
 
     --small-user-panel: on;
     --unrounding: on;
@@ -38,37 +36,34 @@ body {
     --label-font-weight: 500;
 }
 
-/* -------------------------
-   Everforest Light Colors
-------------------------- */
 :root {
     --colors: on;
 
     /* Text */
-    --text-0: oklch(0.15 0.02 120); /* dark text on light panels */
-    --text-1: oklch(0.12 0.02 120);
-    --text-2: oklch(0.1 0.02 120);
-    --text-3: oklch(0.2 0.03 120);
-    --text-4: oklch(0.3 0.03 120);
-    --text-5: oklch(0.4 0.05 125); /* muted greenish text */
+    --text-0: oklch(0.18 0.02 120); /* main text on panels */
+    --text-1: oklch(0.15 0.02 120); /* headings / important text */
+    --text-2: oklch(0.12 0.02 120); /* lighter labels */
+    --text-3: oklch(0.2 0.03 120);  /* normal text */
+    --text-4: oklch(0.3 0.03 120);  /* icons / channels */
+    --text-5: oklch(0.4 0.04 125);  /* muted channels / timestamps */
 
     /* Backgrounds */
-    --bg-1: oklch(0.95 0.03 120); /* panels/buttons when clicked */
-    --bg-2: oklch(0.90 0.03 120); /* default panels/buttons */
-    --bg-3: oklch(0.85 0.03 120); /* secondary spacing panels */
-    --bg-4: oklch(0.98 0.02 120); /* main background */
+    --bg-1: oklch(0.95 0.02 120); /* buttons clicked / active panels */
+    --bg-2: oklch(0.92 0.02 120); /* buttons / panels default */
+    --bg-3: oklch(0.88 0.02 120); /* secondary spacing panels */
+    --bg-4: oklch(0.98 0.02 120); /* main app background */
     --hover: var(--bg-2);
     --active: var(--bg-1);
-    --active-2: oklch(0.92 0.03 120);
+    --active-2: oklch(0.93 0.02 120);
     --message-hover: var(--hover);
 
     /* Accents */
-    --accent-1: oklch(0.5 0.08 125); /* links, highlights */
+    --accent-1: oklch(0.5 0.08 125);  /* links, highlights */
     --accent-2: oklch(0.45 0.08 125);
-    --accent-3: oklch(0.4 0.08 125);
-    --accent-4: oklch(0.35 0.08 125);
-    --accent-5: oklch(0.3 0.06 125);
-    --accent-new: oklch(0.7 0.08 345); /* muted red for mute/deafen */
+    --accent-3: oklch(0.42 0.08 125);
+    --accent-4: oklch(0.4 0.08 125);
+    --accent-5: oklch(0.35 0.06 125);
+    --accent-new: oklch(0.65 0.08 345); /* mute/deafen */
 
     /* Mentions / Replies */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
@@ -78,9 +73,9 @@ body {
 
     /* Status */
     --online: oklch(0.45 0.08 125);
-    --dnd: oklch(0.7 0.08 345);
-    --idle: oklch(0.65 0.08 90);
-    --streaming: oklch(0.6 0.08 280);
+    --dnd: oklch(0.65 0.08 345);
+    --idle: oklch(0.6 0.08 90);
+    --streaming: oklch(0.58 0.08 280);
     --offline: var(--text-4);
 
     /* Borders */
@@ -89,7 +84,7 @@ body {
     --border-hover: var(--accent-2);
     --button-border: hsl(0, 0%, 0%, 0.05);
 
-    /* Base Colors */
+    /* Base colors */
     --red-1: oklch(0.7 0.08 19);
     --red-2: var(--red-1);
     --red-3: var(--red-1);
@@ -97,7 +92,7 @@ body {
     --green-2: var(--green-1);
     --green-3: var(--green-1);
     --green-4: oklch(0.6 0.08 125);
-    --green-5: oklch(0.7 0.04 157);
+    --green-5: oklch(0.7 0.03 157);
     --blue-1: oklch(0.55 0.06 185);
     --blue-2: var(--blue-1);
     --blue-3: var(--blue-1);
@@ -106,8 +101,8 @@ body {
     --yellow-1: oklch(0.6 0.08 83);
     --yellow-2: var(--yellow-1);
     --yellow-3: var(--yellow-1);
-    --yellow-4: oklch(0.7 0.08 83);
-    --yellow-5: oklch(0.8 0.03 101);
+    --yellow-4: oklch(0.68 0.08 83);
+    --yellow-5: oklch(0.78 0.03 101);
     --purple-1: oklch(0.55 0.08 349);
     --purple-2: var(--purple-1);
     --purple-3: var(--purple-1);
